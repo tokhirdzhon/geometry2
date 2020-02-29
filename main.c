@@ -15,7 +15,9 @@ int main()
     char input[128], name[64];
     fgets(input, 128, stdin);
     input[strlen(input) - 1] = '\0';
-
+    for (int i = 0; i < 128; i++) {
+        input[i] = tolower(input[i]);
+    }
     int test = 1;
     // Удаление лишних пробелов
     for (int j = 0, i = 0; i < strlen(input); i++) {
